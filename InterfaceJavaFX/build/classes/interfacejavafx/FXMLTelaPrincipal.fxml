@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="interfacejavafx.FXMLTelaPrincipalController">
+   <children>
+      <MenuBar fx:id="menuBar" prefHeight="25.0" prefWidth="600.0">
+        <menus>
+          <Menu text="Arquivo">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Sair" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Usuários">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#cadUsuario" text="Cadastrar" />
+                  <MenuItem mnemonicParsing="false" text="Alterar" />
+                  <MenuItem mnemonicParsing="false" text="Excluir" />
+                  <MenuItem mnemonicParsing="false" text="Pesquisar" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Clientes">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Cadastrar" />
+                  <MenuItem mnemonicParsing="false" text="Alterar" />
+                  <MenuItem mnemonicParsing="false" text="Excluir" />
+                  <MenuItem mnemonicParsing="false" text="Pesquisar" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Sobre">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#bSobre" text="About" />
+               </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+      <Pane fx:id="pCadUser" layoutX="-2.0" layoutY="48.0" prefHeight="351.0" prefWidth="600.0" visible="false">
+         <children>
+            <Label layoutX="25.0" layoutY="52.0" text="Usuario" />
+            <Label layoutX="29.0" layoutY="105.0" text="Senha" />
+            <Label layoutX="29.0" layoutY="158.0" text="Confirmar senha" />
+            <TextField layoutX="127.0" layoutY="48.0" prefHeight="25.0" prefWidth="300.0" />
+            <PasswordField layoutX="127.0" layoutY="101.0" prefHeight="25.0" prefWidth="300.0" />
+            <PasswordField layoutX="127.0" layoutY="154.0" prefHeight="25.0" prefWidth="300.0" />
+            <Button layoutX="484.0" layoutY="285.0" mnemonicParsing="false" text="Cadastrar" />
+            <Button layoutX="401.0" layoutY="285.0" mnemonicParsing="false" onAction="#bVoltar" prefHeight="25.0" prefWidth="66.0" text="Voltar" />
+         </children>
+      </Pane>
+      <Pane fx:id="panSobre" layoutY="48.0" prefHeight="351.0" prefWidth="600.0" visible="false">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" height="351.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="600.0">
+               <fill>
+                  <RadialGradient centerX="0.45" cycleMethod="REFLECT" focusAngle="164.77" focusDistance="-1.0" radius="0.46511627906976744">
+                     <stops>
+                        <Stop color="#d77272" />
+                        <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </RadialGradient>
+               </fill>
+            </Rectangle>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="178.0" layoutY="69.0" text="Desenvolvido por Victor Mourão">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <Label layoutX="278.0" layoutY="122.0" text="GitHub">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Hyperlink fx:id="hlGit" layoutX="215.0" layoutY="148.0" onAction="#hlGitOpen" text="https://github.com/AcidTr">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Hyperlink>
+            <Button layoutX="274.0" layoutY="249.0" mnemonicParsing="false" onAction="#bVoltar" text="Voltar" />
+         </children>
+      </Pane>
+      <Pane fx:id="panBtn" layoutX="-2.0" layoutY="27.0" prefHeight="17.0" prefWidth="600.0">
+         <children>
+            <HBox layoutX="7.0" layoutY="-4.0" prefHeight="25.0" prefWidth="600.0">
+               <children>
+                  <Button fx:id="cadUser" layoutX="7.0" layoutY="-4.0" mnemonicParsing="false" prefHeight="0.0" prefWidth="22.0">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </Button>
+                  <Button layoutX="29.0" layoutY="-4.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="22.0" />
+                  <Button fx:id="btnSobre" layoutX="51.0" layoutY="-4.0" mnemonicParsing="false" onAction="#bSobre" prefHeight="25.0" prefWidth="22.0" />
+                  <Button fx:id="btnSair" layoutX="96.0" layoutY="-4.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="22.0" />
+               </children>
+            </HBox>
+         </children>
+         <opaqueInsets>
+            <Insets top="3.0" />
+         </opaqueInsets>
+      </Pane>
+   </children>
+</AnchorPane>
