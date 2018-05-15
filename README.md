@@ -1,6 +1,6 @@
 # InterfaceJavaFX
 
-<h1>Estudo JavaFX (Em construção)</h1>
+<h1>Estudo JavaFX </h1>
 
 <h2>Objetivo</h2>
 
