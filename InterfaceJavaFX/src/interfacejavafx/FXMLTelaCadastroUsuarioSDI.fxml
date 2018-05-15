@@ -6,15 +6,26 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="280.0" prefWidth="453.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="interfacejavafx.FXMLTelaCadastroUsuarioSDIController">
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="380.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="interfacejavafx.FXMLTelaCadastroUsuarioSDIController">
    <children>
-      <Label layoutX="33.0" layoutY="44.0" text="Usuario" />
-      <Label layoutX="37.0" layoutY="155.0" text="Confirmar Senha" />
-      <Label layoutX="37.0" layoutY="97.0" text="Senha" />
-      <TextField layoutX="133.0" layoutY="40.0" prefHeight="25.0" prefWidth="280.0" />
-      <PasswordField layoutX="133.0" layoutY="93.0" prefHeight="25.0" prefWidth="280.0" />
-      <PasswordField layoutX="133.0" layoutY="151.0" prefHeight="25.0" prefWidth="280.0" />
-      <Button layoutX="372.0" layoutY="232.0" mnemonicParsing="false" text="Cadastrar" />
-      <Button fx:id="btnVoltar" layoutX="299.0" layoutY="232.0" mnemonicParsing="false" text="Voltar" />
+      <Label layoutX="27.0" layoutY="44.0" text="Nome" />
+      <Label layoutX="27.0" layoutY="134.0" prefHeight="17.0" prefWidth="54.0" text="Sexo" />
+      <Label layoutX="27.0" layoutY="89.0" text="Nascimento" />
+      <TextField fx:id="txtNome" layoutX="133.0" layoutY="40.0" prefHeight="25.0" prefWidth="280.0" />
+      <Label layoutX="27.0" layoutY="173.0" prefHeight="17.0" prefWidth="54.0" text="Telefone" />
+      <Label layoutX="27.0" layoutY="215.0" prefHeight="17.0" prefWidth="54.0" text="Profissão" />
+      <Label layoutX="27.0" layoutY="256.0" prefHeight="17.0" prefWidth="64.0" text="Estado Civil" />
+      <DatePicker fx:id="dpNasc" layoutX="133.0" layoutY="85.0" prefHeight="25.0" prefWidth="280.0" />
+      <RadioButton fx:id="rbFem" layoutX="133.0" layoutY="134.0" mnemonicParsing="false" selected="true" text="Feminino">
+         <toggleGroup>
+            <ToggleGroup fx:id="sexo" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="rbMasc" layoutX="230.0" layoutY="134.0" mnemonicParsing="false" text="Masculino" toggleGroup="$sexo" />
+      <TextField fx:id="txtTel" layoutX="134.0" layoutY="169.0" prefHeight="25.0" prefWidth="280.0" />
+      <TextField fx:id="txtProf" layoutX="133.0" layoutY="211.0" prefHeight="25.0" prefWidth="280.0" />
+      <ChoiceBox fx:id="chbEstadoCivil" layoutX="133.0" layoutY="252.0" prefWidth="150.0" />
+      <Button fx:id="btnVoltar" layoutX="499.0" layoutY="324.0" mnemonicParsing="false" onAction="#bVoltar" text="Voltar" />
+      <Button layoutX="559.0" layoutY="324.0" mnemonicParsing="false" text="Cadastrar" />
    </children>
 </AnchorPane>
