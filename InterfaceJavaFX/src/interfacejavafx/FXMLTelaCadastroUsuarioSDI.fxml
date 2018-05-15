@@ -16,7 +16,7 @@
       <Label layoutX="27.0" layoutY="215.0" prefHeight="17.0" prefWidth="54.0" text="Profissão" />
       <Label layoutX="27.0" layoutY="256.0" prefHeight="17.0" prefWidth="64.0" text="Estado Civil" />
       <DatePicker fx:id="dpNasc" layoutX="133.0" layoutY="85.0" prefHeight="25.0" prefWidth="280.0" />
-      <RadioButton fx:id="rbFem" layoutX="133.0" layoutY="134.0" mnemonicParsing="false" text="Feminino">
+      <RadioButton fx:id="rbFem" layoutX="133.0" layoutY="134.0" mnemonicParsing="false" selected="true" text="Feminino">
          <toggleGroup>
             <ToggleGroup fx:id="sexo" />
          </toggleGroup>
