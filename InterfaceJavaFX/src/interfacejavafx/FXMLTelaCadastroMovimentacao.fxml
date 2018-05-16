@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="320.0" prefWidth="420.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="interfacejavafx.FXMLTelaCadastroMovimentacaoController">
+   <children>
+      <Label layoutX="33.0" layoutY="49.0" text="Data" />
+      <Label layoutX="33.0" layoutY="99.0" text="Hora" />
+      <Label layoutX="33.0" layoutY="149.0" text="Cliente" />
+      <Label layoutX="33.0" layoutY="199.0" text="Funcionário" />
+      <DatePicker fx:id="dpData" layoutX="113.0" layoutY="45.0" prefHeight="25.0" prefWidth="200.0" />
+      <TextField fx:id="txtHora" layoutX="113.0" layoutY="95.0" prefHeight="25.0" prefWidth="200.0" />
+      <ComboBox fx:id="cbCliente" editable="true" layoutX="113.0" layoutY="145.0" prefHeight="25.0" prefWidth="200.0" />
+      <ComboBox fx:id="cbFunc" editable="true" layoutX="113.0" layoutY="195.0" prefHeight="25.0" prefWidth="200.0" />
+      <Button fx:id="btnVoltar" layoutX="277.0" layoutY="268.0" mnemonicParsing="false" onAction="#bVoltar" text="Voltar" />
+      <Button layoutX="342.0" layoutY="268.0" mnemonicParsing="false" text="Registrar" />
+   </children>
+</AnchorPane>
