@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="249.0" prefWidth="482.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="interfacejavafx.FXMLTelaCadastroFuncController">
+   <children>
+      <Label layoutX="27.0" layoutY="44.0" text="Nome" />
+      <Label layoutX="27.0" layoutY="134.0" prefHeight="17.0" prefWidth="54.0" text="Sexo" />
+      <Label layoutX="27.0" layoutY="89.0" text="Nascimento" />
+      <TextField fx:id="txtNome" layoutX="133.0" layoutY="40.0" prefHeight="25.0" prefWidth="280.0" />
+      <DatePicker fx:id="dpNasc" layoutX="133.0" layoutY="85.0" prefHeight="25.0" prefWidth="280.0" />
+      <RadioButton fx:id="rbFem" layoutX="133.0" layoutY="134.0" mnemonicParsing="false" selected="true" text="Feminino">
+         <toggleGroup>
+            <ToggleGroup fx:id="sexo" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="rbMasc" layoutX="230.0" layoutY="134.0" mnemonicParsing="false" text="Masculino" toggleGroup="$sexo" />
+      <Button fx:id="btnVoltar" layoutX="350.0" layoutY="198.0" mnemonicParsing="false" onAction="#bVoltar" text="Voltar" />
+      <Button layoutX="410.0" layoutY="198.0" mnemonicParsing="false" text="Cadastrar" />
+   </children>
+</AnchorPane>
