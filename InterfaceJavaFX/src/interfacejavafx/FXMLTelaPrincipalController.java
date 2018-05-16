@@ -18,7 +18,9 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Hyperlink;
+
 import javafx.scene.control.Menu;
+
 
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -53,6 +55,7 @@ public class FXMLTelaPrincipalController implements Initializable {
     @FXML
     private Hyperlink hlGit;
 
+
     @FXML
     private Button btnPesq;
 
@@ -64,7 +67,7 @@ public class FXMLTelaPrincipalController implements Initializable {
 
     @FXML
     private Button btnProd;
-    
+
     @FXML
     private void hlGitOpen() {
         //ação para abrir link do GitHub no navegador.(pesquisar)
@@ -79,6 +82,7 @@ public class FXMLTelaPrincipalController implements Initializable {
     private void bSobre() {
         panSobre.setVisible(true);
     }
+
 
     @FXML
     private void cadUsuario() throws Exception{
@@ -104,6 +108,10 @@ public class FXMLTelaPrincipalController implements Initializable {
    
     @FXML
     private void cadFunc() throws Exception{
+
+    @FXML
+    private void cadUsuario() throws Exception{
+
         if (panSobre.isVisible()) {
             panSobre.setVisible(false);
         }
@@ -111,13 +119,20 @@ public class FXMLTelaPrincipalController implements Initializable {
 
         Parent root = null;
         try {
+
             root = FXMLLoader.load(getClass().getResource("FXMLTelaCadastroFunc.fxml")); //Carregar tela de cadastro de funcionários
         } catch (IOException ex) {
             Logger.getLogger(FXMLTelaCadastroFuncController.class.getName()).log(Level.SEVERE, null, ex);
+
+            root = FXMLLoader.load(getClass().getResource("FXMLTelaCadastroUsuarioSDI.fxml"));
+        } catch (IOException ex) {
+            Logger.getLogger(FXMLTelaCadastroUsuarioSDIController.class.getName()).log(Level.SEVERE, null, ex);
+
         }
 
         Scene scene = new Scene(root);
         stage.setScene(scene);
+
         stage.setResizable(false);
         stage.show();
         btnCadFunc.getScene().getWindow().hide();
@@ -126,6 +141,15 @@ public class FXMLTelaPrincipalController implements Initializable {
     
     @FXML
     private void cadMov() throws Exception{
+
+        stage.show();
+        btnCadUser.getScene().getWindow().hide();
+        
+    }
+   
+    @FXML
+    private void cadFunc() throws Exception{
+
         if (panSobre.isVisible()) {
             panSobre.setVisible(false);
         }
@@ -133,13 +157,20 @@ public class FXMLTelaPrincipalController implements Initializable {
 
         Parent root = null;
         try {
+
             root = FXMLLoader.load(getClass().getResource("FXMLTelaCadastroMovimentacao.fxml"));
         } catch (IOException ex) {
             Logger.getLogger(FXMLTelaCadastroMovimentacaoController.class.getName()).log(Level.SEVERE, null, ex);
+
+            root = FXMLLoader.load(getClass().getResource("FXMLTelaCadastroFunc.fxml")); //Carregar tela de cadastro de funcionários
+        } catch (IOException ex) {
+            Logger.getLogger(FXMLTelaCadastroFuncController.class.getName()).log(Level.SEVERE, null, ex);
+
         }
 
         Scene scene = new Scene(root);
         stage.setScene(scene);
+
         stage.setResizable(false);
         stage.show();
         btnCadUser.getScene().getWindow().hide();
@@ -167,6 +198,12 @@ public class FXMLTelaPrincipalController implements Initializable {
         btnCadFunc.getScene().getWindow().hide();
     }
 
+        stage.show();
+        btnCadFunc.getScene().getWindow().hide();
+        
+    }
+
+
     @FXML
     private void bSair() throws Exception {
         Stage stage = new Stage();
@@ -178,7 +215,10 @@ public class FXMLTelaPrincipalController implements Initializable {
         }
 
         Scene scene = new Scene(root);
+
         stage.setResizable(false);
+
+
         stage.setScene(scene);
         Image app = new Image(getClass().getResourceAsStream("imagens/61205.png"));
         stage.getIcons().add(app);
@@ -189,19 +229,26 @@ public class FXMLTelaPrincipalController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+
         
         
-        
+
+
+
         panSobre.setVisible(false);
         btnCadUser.setGraphic(new ImageView(new javafx.scene.image.Image(getClass().getResourceAsStream("imagens/user_add.png"))));
         btnSobre.setGraphic(new ImageView(new javafx.scene.image.Image(getClass().getResourceAsStream("imagens/help.png"))));
         btnSair.setGraphic(new ImageView(new javafx.scene.image.Image(getClass().getResourceAsStream("imagens/user_go.png"))));
         btnCadFunc.setGraphic(new ImageView(new javafx.scene.image.Image(getClass().getResourceAsStream("imagens/group_add.png"))));
+
         btnMov.setGraphic(new ImageView(new javafx.scene.image.Image(getClass().getResourceAsStream("imagens/add.png"))));
         btnProd.setGraphic(new ImageView(new javafx.scene.image.Image(getClass().getResourceAsStream("imagens/basket_add.png"))));
         btnServ.setGraphic(new ImageView(new javafx.scene.image.Image(getClass().getResourceAsStream("imagens/pencil_add.png"))));
         btnPesq.setGraphic(new ImageView(new javafx.scene.image.Image(getClass().getResourceAsStream("imagens/magnifier.png"))));
         btnMov.setVisible(false);
+
+        
+
 
     }
 
