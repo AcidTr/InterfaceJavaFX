@@ -63,6 +63,7 @@ public class FXMLTelaCadastroUsuarioSDIController implements Initializable {
 
         Scene scene = new Scene(root);
         stage.setScene(scene);
+        stage.setResizable(false);
         stage.show();
         btnVoltar.getScene().getWindow().hide();
       //RadioButton radio = (RadioButton) (sexo.getSelectedToggle());
@@ -100,4 +101,3 @@ public class FXMLTelaCadastroUsuarioSDIController implements Initializable {
     }
 
 }
-
