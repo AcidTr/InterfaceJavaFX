@@ -16,9 +16,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
-import javafx.scene.control.ToggleGroup;
 import javafx.stage.Stage;
 
 /**
@@ -26,7 +24,11 @@ import javafx.stage.Stage;
  *
  * @author Victor
  */
-public class FXMLTelaCadastroFuncController implements Initializable {
+public class FXMLTelaCadastroProdutoController implements Initializable {
+
+    
+    @FXML
+    private TextField txtQtd;
 
     @FXML
     private Button btnVoltar;
@@ -35,10 +37,9 @@ public class FXMLTelaCadastroFuncController implements Initializable {
     private TextField txtNome;
 
     @FXML
-    private DatePicker dpNasc;
-
-    @FXML
-    private ToggleGroup sexo;
+    private TextField txtPreco;
+    
+    
     
     @FXML
     private void bVoltar() {
@@ -52,17 +53,19 @@ public class FXMLTelaCadastroFuncController implements Initializable {
 
         Scene scene = new Scene(root);
         stage.setScene(scene);
-
         stage.setResizable(false);
-
-
         stage.show();
         btnVoltar.getScene().getWindow().hide();
+      //RadioButton radio = (RadioButton) (sexo.getSelectedToggle());
+      //System.out.println(radio.getText());
     }
+    
+    //Decimal do MySQL pode ser convertido para java.math.BigDecimal
+    //Date -> java.sql.Date e Time -> java.sql.Time
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        
+        // TODO
     }    
     
 }

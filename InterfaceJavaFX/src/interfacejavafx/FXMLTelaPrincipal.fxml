@@ -24,23 +24,41 @@
             <items>
               <MenuItem mnemonicParsing="false" onAction="#cadUsuario" text="Cadastrar" />
                   <MenuItem mnemonicParsing="false" text="Alterar" />
-                  <MenuItem mnemonicParsing="false" text="Excluir" />
-                  <MenuItem mnemonicParsing="false" text="Pesquisar" />
             </items>
           </Menu>
+
+          <Menu mnemonicParsing="false" text="Funcionários">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#cadFunc" text="Cadastrar" />
+
           <Menu mnemonicParsing="false" text="Funcionarios">
             <items>
               <MenuItem mnemonicParsing="false" onAction="#cadFunc" text="Cadastrar" />
                   <MenuItem mnemonicParsing="false" text="Alterar" />
                   <MenuItem mnemonicParsing="false" text="Excluir" />
                   <MenuItem mnemonicParsing="false" text="Pesquisar" />
+
             </items>
           </Menu>
             <Menu mnemonicParsing="false" text="Movimetação">
                <items>
+
+                  <MenuItem mnemonicParsing="false" onAction="#cadMov" text="Registrar" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Serviços">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Cadastrar" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Produtos">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#cadProd" text="Cadastrar" />
+
                   <MenuItem mnemonicParsing="false" text="Registrar" />
                   <MenuItem mnemonicParsing="false" text="Consultar" />
                   <MenuItem mnemonicParsing="false" text="Excluir" />
+
                </items>
             </Menu>
             <Menu mnemonicParsing="false" text="Sobre">
@@ -90,8 +108,17 @@
                      </opaqueInsets>
                   </Button>
                   <Button fx:id="btnCadFunc" layoutX="29.0" layoutY="-4.0" mnemonicParsing="false" onAction="#cadFunc" prefHeight="20.0" prefWidth="20.0" />
+
+                  <Button fx:id="btnMov" layoutX="51.0" layoutY="-4.0" mnemonicParsing="false" onAction="#cadMov" prefHeight="20.0" prefWidth="20.0" />
+                  <Button fx:id="btnProd" layoutX="96.0" layoutY="-4.0" mnemonicParsing="false" onAction="#cadProd" prefHeight="20.0" prefWidth="20.0" />
+                  <Button fx:id="btnServ" mnemonicParsing="false" prefHeight="20.0" prefWidth="20.0" />
+                  <Button fx:id="btnPesq" mnemonicParsing="false" prefHeight="20.0" prefWidth="20.0" />
+                  <Button fx:id="btnSair" mnemonicParsing="false" onAction="#bSair" prefHeight="20.0" prefWidth="20.0" />
+                  <Button fx:id="btnSobre" mnemonicParsing="false" onAction="#bSobre" prefHeight="20.0" prefWidth="20.0" />
+
                   <Button fx:id="btnSobre" layoutX="51.0" layoutY="-4.0" mnemonicParsing="false" onAction="#bSobre" prefHeight="20.0" prefWidth="20.0" />
                   <Button fx:id="btnSair" layoutX="96.0" layoutY="-4.0" mnemonicParsing="false" onAction="#bSair" prefHeight="20.0" prefWidth="20.0" />
+
                </children>
             </HBox>
          </children>

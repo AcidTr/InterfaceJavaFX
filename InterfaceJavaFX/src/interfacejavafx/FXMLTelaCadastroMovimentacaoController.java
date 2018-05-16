@@ -7,6 +7,8 @@ package interfacejavafx;
 
 import java.io.IOException;
 import java.net.URL;
+import java.time.LocalDate;
+import java.util.Calendar;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -16,9 +18,9 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
-import javafx.scene.control.ToggleGroup;
 import javafx.stage.Stage;
 
 /**
@@ -26,19 +28,22 @@ import javafx.stage.Stage;
  *
  * @author Victor
  */
-public class FXMLTelaCadastroFuncController implements Initializable {
+public class FXMLTelaCadastroMovimentacaoController implements Initializable {
+
+     @FXML
+    private ComboBox<?> cbCliente;
+
+    @FXML
+    private ComboBox<?> cbFunc;
 
     @FXML
     private Button btnVoltar;
 
     @FXML
-    private TextField txtNome;
+    private DatePicker dpData;
 
     @FXML
-    private DatePicker dpNasc;
-
-    @FXML
-    private ToggleGroup sexo;
+    private TextField txtHora;
     
     @FXML
     private void bVoltar() {
@@ -52,17 +57,17 @@ public class FXMLTelaCadastroFuncController implements Initializable {
 
         Scene scene = new Scene(root);
         stage.setScene(scene);
-
         stage.setResizable(false);
-
-
         stage.show();
         btnVoltar.getScene().getWindow().hide();
     }
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        
+        dpData.setValue(LocalDate.now());
+        Calendar cal = Calendar.getInstance();
+       
+        txtHora.setText(Integer.toString(cal.get(Calendar.HOUR))+":"+Integer.toString(cal.get(Calendar.MINUTE))+":"+Integer.toString(cal.get(Calendar.SECOND)));
     }    
     
 }
